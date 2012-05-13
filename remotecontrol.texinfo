@@ -2,7 +2,7 @@
 @comment $Id: GNU-Sample-Texts.html,v 1.7 2008/09/19 15:44:59 karl Exp $
 @comment %**start of header
 @setfilename GNU remotecontrol.info
-@include version.texi
+@comment @include version.texi
 @settitle GNU remotecontrol @value{VERSION}
 @syncodeindex pg cp
 @comment %**end of header
