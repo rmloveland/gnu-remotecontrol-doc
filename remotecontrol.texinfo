@@ -7,6 +7,7 @@
 @syncodeindex pg cp
 @comment %**end of header
 @set VERSION 0.01
+@set UPDATED foo
 @copying
 This manual is for GNU remotecontrol (version @value{VERSION}, @value{UPDATED}), which is an example in the Texinfo documentation.
 
