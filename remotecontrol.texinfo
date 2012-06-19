@@ -2,7 +2,9 @@
 @comment %**start of header
 @setfilename GNU remotecontrol.info
 @settitle GNU remotecontrol @value{VERSION}
-@syncodeindex pg cp
+@c Commented out the below reference to `@syncodeindex' since it was
+@c breaking the build. See section 13.4.2 of the Texinfo manual for more info.
+@c @syncodeindex pg cp
 @comment %**end of header
 @set VERSION 0.01
 @set UPDATED 13 May 2012
@@ -74,43 +76,43 @@ The following list is the minimum recommended chapter reading, per role.
 @section Information Technology
      @itemize @bullet
          @item
-         @ref{Key Features}.
+         @xref{Key Features}.
          @item
-         @ref{System Architecture and Concepts}
+         @xref{System Architecture and Concepts}
          @item
-         @ref{Usage Instructions}
+         @xref{Usage Instructions}
      @end itemize
         
 @section Energy Management
      @itemize @bullet
          @item
-         @ref{Key Features}
+         @xref{Key Features}
          @item
-	 @ref{GNU remotecontrol & BACnet}
+	 @xref{GNU remotecontrol & BACnet}
          @item
-	 @ref{Tax Benefit}
+	 @xref{Tax Benefit}
          @item
-	 @ref{System Architecture and Concepts}
+	 @xref{System Architecture and Concepts}
          @item
-	 @ref{Usage Instructions}
+	 @xref{Usage Instructions}
          @item
-	 @ref{Use Case Scenarios}
+	 @xref{Use Case Scenarios}
          @item
-	 @ref{Implementation Cost}
+	 @xref{Implementation Cost}
          @item
-	 @ref{Roadmap}
+	 @xref{Roadmap}
          @item
-	 @ref{REFERENCE}
+	 @xref{REFERENCE}
      @end itemize
 
 @section End User
      @itemize @bullet
 	 @item
-	 @ref{Key Features}
+	 @xref{Key Features}
 	 @item
-	 @ref{Usage Instructions}
+	 @xref{Usage Instructions}
 	 @item
-	 @ref{Use Case Scenarios}
+	 @xref{Use Case Scenarios}
 	 @end itemize
 
 @node Key Features
@@ -128,7 +130,7 @@ The @uref{http://en.wikipedia.org/wiki/thermostat,HVAC thermostat} is often a co
 You will most likely need to work with others who have a different skill set than you do in order to achieve an energy management strategy.  It is necessary to carefully plan for your selection of the decision makers you choose to work with.  Choosing decision makers that are capable to run your HVAC and IT systems is paramount to the success of your system performance.
 
 @subsection HVAC
-Being a licensed @uref{http://en.wikipedia.org/wiki/Professional_engineer,Professional Engineer} does not make that person a @uref{http://en.wikipedia.org/wiki/Certified_Energy_Manager,Certified Energy Manager}.  They are separate qualifications, each with their own requirements.  Go with a Certified Energy Manager to help you determine if you qualify for any @ref{Tax Benefit} for commercial building being rated as energy efficient.  Even if you don't qualify for a @ref{Tax Benefit}, you will most likely find a very beneficial set of methods to increase your energy management strategies that makes paying the Certified Energy Manger well worth the expense.
+Being a licensed @uref{http://en.wikipedia.org/wiki/Professional_engineer,Professional Engineer} does not make that person a @uref{http://en.wikipedia.org/wiki/Certified_Energy_Manager,Certified Energy Manager}.  They are separate qualifications, each with their own requirements.  Go with a Certified Energy Manager to help you determine if you qualify for any tax benefit for commercial building being rated as energy efficient.  Even if you don't qualify for a tax benefit, you will most likely find a very beneficial set of methods to increase your energy management strategies that makes paying the Certified Energy Manger well worth the expense.
 
 @subsection Information Technology
 Being in an IT role does not make one qualified do an end-to-end design of an IT system. Relevant certifications help to know if one is really capable to do what they say they can do.  Experience is probably the strongest credential one can have for being capable to run an IT system.  Simply put, operation does not equal design.  They are separate qualifications, each with their own requirements.
@@ -184,13 +186,14 @@ You can set up different user accounts, but the nature of an IP thermostat requi
 We recommend you use a High Grade (AES-256 bit) encryption to secure the connection from your computer to your GNU remotecontrol server and verify the identity of your server with your own signed SSL Certificate.  The connection from your computer to your IP thermostat is not changed from your normal connection to your Proliphix IP thermostat.
 
 @subsection Is GNU remotecontrol compatible with BACnet?
-Yes.  Please see the section @ref{GNU remotecontrol & BACnet}.
+Yes. @xref{GNU remotecontrol & BACnet}.
 
 @subsection Can I use GNU remotecontrol to help Test & Balance my HVAC system?
 Yes. Remote Monitoring Server & GNU remotecontrol work together to help you do just this. Recorded data of your HVAC system's usage and outdoor weather information is priceless for testing & balancing.  The review of recorded data offers considerable cost savings, in both time and effort, to when optimizing your system setup.  Additionally, you can reduce the number of people necessary to do the testing and balancing down to 1 person.
 
 @section Future Capabilities
-The next logical step is to expand GNU remotecontrol to be certified with the BACnet communication protocol.  Please see the section @ref{GNU remotecontrol & BACnet} for more information.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
+The next logical step is to expand GNU remotecontrol to be certified
+with the BACnet communication protocol. @xref{GNU remotecontrol & BACnet} for more information.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
 
 @node GNU remotecontrol & BACnet
 @chapter GNU remotecontrol & BACnet
@@ -235,7 +238,7 @@ The following is a list of information that will greatly help you plan for the u
 	 @end itemize
 
 @section Going Forward
-The @ref{Roadmap} of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.
+The roadmap of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework (@xref{Roadmap}).  The BACnet XML Working Group is an excellent example of these attributes.
 
 @node Tax Benefit
 @chapter Tax Benefit
@@ -585,7 +588,8 @@ If you worry about your “stuff”, and your “stuff” has an IP address, you need RM
 @section Browser Selection
 GNU remotecontrol is designed to be used with either @uref{http://www.mozilla.org/,Mozilla Firefox}, or with @uref{http://www.konqueror.org/,Konqueror}.  Microsoft @uref{http://en.wikipedia.org/wiki/Internet_Explorer,Internet Explorer} (IE), though one of the worlds first @uref{http://en.wikipedia.org/wiki/History_of_the_web_browser,graphical} options for a @uref{http://en.wikipedia.org/wiki/Web_browser,web browser} and is credited with helping to grow the Internet past @uref{http://en.wikipedia.org/wiki/Timeline_of_web_browsers,text browsing}, the application @uref{http://www.microsoft.com/ie,IE} simply changes too much and too often to deal with all of the inconsistencies of the browser not being compliant with @uref{http://www.w3.org/standards/agents/browsers,International Standards} of the World Wide Web.  In addition, IE only runs on the Windows operating system whereas GNU remotecontrol runs on any server that can run @uref{http://php.net/downloads.php,PHP}.....of which there are many.
 
-Please review the various @ref{Use Case Scenarios} prior to reading how to go about Using GNU remotecontrol.  These Use Case Scenarios will greatly help you to see the value of Using GNU remotecontrol.
+Please review the various use case scenarios prior to reading how to go
+about Using GNU remotecontrol (@xref{Use Case Scenarios }).  These will greatly help you to see the value of Using GNU remotecontrol.
 
 @section admin.php
 This webpage provides User Management in the GNU remotecontrol application.
@@ -1193,7 +1197,11 @@ The cost to implement GNU remotecontrol, in comparison with a lesser energy mana
 The GNU remotecontrol Road Map is planned for and limited by the following boundaries.
 
 @section Interoperability
-The Future of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.  Please review @ref{GNU remotecontrol & BACnet} for more information.
+The Future of GNU remotecontrol is a commitment to International
+standards and protocols for Information Technology in order to provide
+availability, relevance, transparency, and maintenance of the GNU
+remotecontrol framework.  The BACnet XML Working Group is an excellent
+example of these attributes. @xref{GNU remotecontrol & BACnet} for more information.
 
 @section HVAC Original Equipment Manufacturer - Feature Addition
 OEM's have not added the feature of IP enablement in the past.  The benefits for OEM's to add IP enablement to their thermostat product offering far outweigh any hindrance from remaining a stand alone device.  Examples of these benefits include interoperability, furthered energy management strategies, and increased customer satisfaction from the new capability of remote access to their thermostat.
