@@ -78,41 +78,41 @@ The following list is the minimum recommended chapter reading, per role.
          @item
          @xref{Key Features}.
          @item
-         @xref{System Architecture and Concepts}
+         @xref{System Architecture and Concepts}.
          @item
-         @xref{Usage Instructions}
+         @xref{Usage Instructions}.
      @end itemize
         
 @section Energy Management
      @itemize @bullet
          @item
-         @xref{Key Features}
+         @xref{Key Features}.
          @item
-	 @xref{GNU remotecontrol & BACnet}
+	 @xref{GNU remotecontrol & BACnet}.
          @item
-	 @xref{Tax Benefit}
+	 @xref{Tax Benefit}.
          @item
-	 @xref{System Architecture and Concepts}
+	 @xref{System Architecture and Concepts}.
          @item
-	 @xref{Usage Instructions}
+	 @xref{Usage Instructions}.
          @item
-	 @xref{Use Case Scenarios}
+	 @xref{Use Case Scenarios}.
          @item
-	 @xref{Implementation Cost}
+	 @xref{Implementation Cost}.
          @item
-	 @xref{Roadmap}
+	 @xref{Roadmap}.
          @item
-	 @xref{REFERENCE}
+	 @xref{REFERENCE}.
      @end itemize
 
 @section End User
      @itemize @bullet
 	 @item
-	 @xref{Key Features}
+	 @xref{Key Features}.
 	 @item
-	 @xref{Usage Instructions}
+	 @xref{Usage Instructions}.
 	 @item
-	 @xref{Use Case Scenarios}
+	 @xref{Use Case Scenarios}.
 	 @end itemize
 
 @node Key Features
@@ -193,7 +193,7 @@ Yes. Remote Monitoring Server & GNU remotecontrol work together to help you do j
 
 @section Future Capabilities
 The next logical step is to expand GNU remotecontrol to be certified
-with the BACnet communication protocol. @xref{GNU remotecontrol & BACnet} for more information.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
+with the BACnet communication protocol. For more information, @xref{GNU remotecontrol & BACnet}.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
 
 @node GNU remotecontrol & BACnet
 @chapter GNU remotecontrol & BACnet
@@ -238,7 +238,7 @@ The following is a list of information that will greatly help you plan for the u
 	 @end itemize
 
 @section Going Forward
-The roadmap of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework (@xref{Roadmap}).  The BACnet XML Working Group is an excellent example of these attributes.
+The roadmap of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework. (@xref{Roadmap}.)  The BACnet XML Working Group is an excellent example of these attributes.
 
 @node Tax Benefit
 @chapter Tax Benefit
@@ -589,7 +589,7 @@ If you worry about your “stuff”, and your “stuff” has an IP address, you need RM
 GNU remotecontrol is designed to be used with either @uref{http://www.mozilla.org/,Mozilla Firefox}, or with @uref{http://www.konqueror.org/,Konqueror}.  Microsoft @uref{http://en.wikipedia.org/wiki/Internet_Explorer,Internet Explorer} (IE), though one of the worlds first @uref{http://en.wikipedia.org/wiki/History_of_the_web_browser,graphical} options for a @uref{http://en.wikipedia.org/wiki/Web_browser,web browser} and is credited with helping to grow the Internet past @uref{http://en.wikipedia.org/wiki/Timeline_of_web_browsers,text browsing}, the application @uref{http://www.microsoft.com/ie,IE} simply changes too much and too often to deal with all of the inconsistencies of the browser not being compliant with @uref{http://www.w3.org/standards/agents/browsers,International Standards} of the World Wide Web.  In addition, IE only runs on the Windows operating system whereas GNU remotecontrol runs on any server that can run @uref{http://php.net/downloads.php,PHP}.....of which there are many.
 
 Please review the various use case scenarios prior to reading how to go
-about Using GNU remotecontrol (@xref{Use Case Scenarios }).  These will greatly help you to see the value of Using GNU remotecontrol.
+about Using GNU remotecontrol. (@xref{Use Case Scenarios }.)  These will greatly help you to see the value of Using GNU remotecontrol.
 
 @section admin.php
 This webpage provides User Management in the GNU remotecontrol application.
@@ -1201,7 +1201,7 @@ The Future of GNU remotecontrol is a commitment to International
 standards and protocols for Information Technology in order to provide
 availability, relevance, transparency, and maintenance of the GNU
 remotecontrol framework.  The BACnet XML Working Group is an excellent
-example of these attributes. @xref{GNU remotecontrol & BACnet} for more information.
+example of these attributes.  For more information, @xref{GNU remotecontrol & BACnet}.
 
 @section HVAC Original Equipment Manufacturer - Feature Addition
 OEM's have not added the feature of IP enablement in the past.  The benefits for OEM's to add IP enablement to their thermostat product offering far outweigh any hindrance from remaining a stand alone device.  Examples of these benefits include interoperability, furthered energy management strategies, and increased customer satisfaction from the new capability of remote access to their thermostat.
