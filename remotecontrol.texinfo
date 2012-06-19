@@ -1,8 +1,6 @@
 \input texinfo   @c -*-texinfo-*-
-@comment $Id: GNU-Sample-Texts.html,v 1.7 2008/09/19 15:44:59 karl Exp $
 @comment %**start of header
 @setfilename GNU remotecontrol.info
-@comment @include version.texi
 @settitle GNU remotecontrol @value{VERSION}
 @syncodeindex pg cp
 @comment %**end of header
@@ -28,25 +26,46 @@ Permission is granted to copy, distribute and/or modify this document under the 
 @titlepage
 @title GNU remotecontrol
 @subtitle for version @value{VERSION}, @value{UPDATED}
-@author Stephen H. Dawson (@email{service@shdawson.com})
+@author Stephen H. Dawson
 @page
 @vskip 0pt plus 1filll
 @insertcopying
 @end titlepage
 
+@c Output the Table of Contents at the beginning.
 @contents
 
 @ifnottex
+@node Top
+@top GNU remotecontrol
 
 This manual is for GNU remotecontrol (version @value{VERSION}, @value{UPDATED}).
 @end ifnottex
 
+@menu
+* Overview::  An overview of GNU remotecontrol.
+* Scope::  The scope of this document. 
+* Key Features::  Key features of GNU remotecontrol, described.
+* GNU remotecontrol & BACnet::  How they work together.
+* Tax Benefit::  Tax benefits of using GNU remotecontrol.
+* System Architecture and Concepts::  The architecture of the system.
+* Usage Instructions::  How to use it.
+* Use Case Scenarios::  How you might want to use it.
+* Implementation Cost::  The cost to get started.
+* Roadmap::  Where we're going.
+* REFERENCE::  Reference materials for later use.
+* Contributors::  Who made this?
+* GNU Free Documentation License:: The license covering this document.
+@c * Index::  Complete index.
+@end menu
 
+@node Overview
 @chapter Overview
 GNU remotecontrol is a web application serving as a management tool for multiple IP enabled HVAC thermostats (device), and other Building Automation devices.  The purpose of GNU remotecontrol is to read from and write to multiple IP enabled thermostats all at one time.
 
 The GNU remotecontrol framework is designed to work with any IP enabled HVAC thermostat, but can be easily developed to operate any number of networked devices.  This framework is built with @uref{http://en.wikipedia.org/wiki/CURL,cURL}, @uref{http://en.wikipedia.org/wiki/PHP,PHP}, and @uref{http://en.wikipedia.org/wiki/MySQL,MySQL}.  Its system architecture is enabled on a server-client principle, where users can login to the server using a web browser to manage multiple remote devices from a single web interface.  The GNU remotecontrol framework was developed to work in combination with a Remote Monitoring server, which monitors configurable device parameters and can generate automatic system responses and alerts.  If required, the GNU remotecontrol is both scalable and distributable over multiple computers serving different roles in the HVAC or remote device management framework.  The @uref{http://www.proliphix.com/,Proliphix} IP thermostat (currently the only true IP enabled HVAC thermostat on the market) was used to develop the GNU remotecontrol web application.
 
+@node Scope
 @chapter Scope
 The scope of this documentation is to address the 3 roles that function in GNU remote control; @strong{Information Technology}, @strong{Energy Management}, and @strong{End User}.  The documentation contains information pertinent to each role.  The intended end result is to help equip each role with the necessary definitions and reference information in order to further high level communication among the roles.
 
@@ -55,49 +74,50 @@ The following list is the minimum recommended chapter reading, per role.
 @section Information Technology
      @itemize @bullet
          @item
-         [Key Features]
+         @ref{Key Features}.
          @item
-         [System Architecture and Concepts]
+         @ref{System Architecture and Concepts}
          @item
-         [Usage Instructions]
+         @ref{Usage Instructions}
      @end itemize
         
 @section Energy Management
      @itemize @bullet
          @item
-         [Key Features]
+         @ref{Key Features}
          @item
-	 [GNU remotecontrol & BACnet]
+	 @ref{GNU remotecontrol & BACnet}
          @item
-	 [Tax Benefit]
+	 @ref{Tax Benefit}
          @item
-	 [System Architecture and Concepts]
+	 @ref{System Architecture and Concepts}
          @item
-	 [Usage Instructions]
+	 @ref{Usage Instructions}
          @item
-	 [Use Case Scenarios]
+	 @ref{Use Case Scenarios}
          @item
-	 [Implementation Cost]
+	 @ref{Implementation Cost}
          @item
-	 [Roadmap]
+	 @ref{Roadmap}
          @item
-	 [REFERENCE]
+	 @ref{REFERENCE}
      @end itemize
 
 @section End User
      @itemize @bullet
 	 @item
-	 [Key Features]
+	 @ref{Key Features}
 	 @item
-	 [Usage Instructions]
+	 @ref{Usage Instructions}
 	 @item
-	 [Use Case Scenarios]
+	 @ref{Use Case Scenarios}
 	 @end itemize
 
+@node Key Features
 @chapter Key Features
 
 @section Present Capabilities
-GNU remotecontrol is designed to substantially reduce the time & effort necessary to remotely manage multiple IP thermostats, while significantly increasing your productivity through its many useful and time saving features. The User Interface is no more difficult than using any other web application involving simple check boxes and pull-down menus.  GNU remotecontrol, combined with the [Remote Monitoring Server], work together as a complete HVAC energy management system.  GNU remotecontrol more than pays for itself by saving time/effort in manual labor for managing all resources individually....and then some.
+GNU remotecontrol is designed to substantially reduce the time & effort necessary to remotely manage multiple IP thermostats, while significantly increasing your productivity through its many useful and time saving features. The User Interface is no more difficult than using any other web application involving simple check boxes and pull-down menus.  GNU remotecontrol, combined with the Remote Monitoring Server, work together as a complete HVAC energy management system.  GNU remotecontrol more than pays for itself by saving time/effort in manual labor for managing all resources individually....and then some.
 
 @section HVAC Thermostat
 It is necessary to understand the design and usage intent of the HVAC thermostat in order to fully grasp the design and usage intent of GNU remotecontrol.
@@ -108,13 +128,13 @@ The @uref{http://en.wikipedia.org/wiki/thermostat,HVAC thermostat} is often a co
 You will most likely need to work with others who have a different skill set than you do in order to achieve an energy management strategy.  It is necessary to carefully plan for your selection of the decision makers you choose to work with.  Choosing decision makers that are capable to run your HVAC and IT systems is paramount to the success of your system performance.
 
 @subsection HVAC
-Being a licensed @uref{http://en.wikipedia.org/wiki/Professional_engineer,Professional Engineer} does not make that person a @uref{http://en.wikipedia.org/wiki/Certified_Energy_Manager,Certified Energy Manager}.  They are separate qualifications, each with their own requirements.  Go with a Certified Energy Manager to help you determine if you qualify for any [Tax Benefit] for commercial building being rated as energy efficient.  Even if you don't qualify for a [Tax Benefit], you will most likely find a very beneficial set of methods to increase your energy management strategies that makes paying the Certified Energy Manger well worth the expense.
+Being a licensed @uref{http://en.wikipedia.org/wiki/Professional_engineer,Professional Engineer} does not make that person a @uref{http://en.wikipedia.org/wiki/Certified_Energy_Manager,Certified Energy Manager}.  They are separate qualifications, each with their own requirements.  Go with a Certified Energy Manager to help you determine if you qualify for any @ref{Tax Benefit} for commercial building being rated as energy efficient.  Even if you don't qualify for a @ref{Tax Benefit}, you will most likely find a very beneficial set of methods to increase your energy management strategies that makes paying the Certified Energy Manger well worth the expense.
 
 @subsection Information Technology
 Being in an IT role does not make one qualified do an end-to-end design of an IT system. Relevant certifications help to know if one is really capable to do what they say they can do.  Experience is probably the strongest credential one can have for being capable to run an IT system.  Simply put, operation does not equal design.  They are separate qualifications, each with their own requirements.
 
 @subsection Conclusion
-Look to your [Benefit Analysis] for decision making on how you need to design and operate your energy management strategy.
+Look to your Benefit Analysis for decision making on how you need to design and operate your energy management strategy.
 
 @section Security Considerations
 The following is a list of information that will greatly help you plan for the network implementation and configuration of your energy management strategy.
@@ -145,11 +165,11 @@ The IP thermostat will very much help with that measurement.
 @subsection How do I use GNU remotecontrol?
 Pretty easy, actually.  Select the IP thermostats you want to change the settings of...make the change.....and that’s it.  You can easily see the time/effort you save changing the air conditioning from 75°F to 73°F for several IP thermostats, all at once!  Then, imagine changing your setback schedule somehow on top of that, for say 30 different IP thermostats, all at once!
 
-@subsection Can I use GNU remotecontrol and [Remote Monitoring Server] together?
-Oh, yes.  Think of GNU remotecontrol as writing to your IP thermostats, and [Remote Monitoring Server] reading information about your IP thermostats. The two go hand in hand.  They are intended to work together.
+@subsection Can I use GNU remotecontrol and Remote Monitoring Server together?
+Oh, yes.  Think of GNU remotecontrol as writing to your IP thermostats, and Remote Monitoring Server reading information about your IP thermostats. The two go hand in hand.  They are intended to work together.
 
-@subsection What about the weather, can I tie weather related data into GNU remotecontrol and [Remote Monitoring Server]?
-Yep. Use your [Remote Monitoring Server] to collect information about the weather from International Weather Services for the location of your IP thermostat. That will tell you a great deal about your energy management plan.
+@subsection What about the weather, can I tie weather related data into GNU remotecontrol and Remote Monitoring Server?
+Yep. Use your Remote Monitoring Server to collect information about the weather from International Weather Services for the location of your IP thermostat. That will tell you a great deal about your energy management plan.
 
 @subsection Mobile access for GNU remotecontrol?
 Yes, but that depends on who you have for cell phone service, the type of cell phone you have, and the Internet browser on that phone.
@@ -164,14 +184,15 @@ You can set up different user accounts, but the nature of an IP thermostat requi
 We recommend you use a High Grade (AES-256 bit) encryption to secure the connection from your computer to your GNU remotecontrol server and verify the identity of your server with your own signed SSL Certificate.  The connection from your computer to your IP thermostat is not changed from your normal connection to your Proliphix IP thermostat.
 
 @subsection Is GNU remotecontrol compatible with BACnet?
-Yes.  Please see the section [GNU remotecontrol & BACnet].
+Yes.  Please see the section @ref{GNU remotecontrol & BACnet}.
 
 @subsection Can I use GNU remotecontrol to help Test & Balance my HVAC system?
-Yes. [Remote Monitoring Server] & GNU remotecontrol work together to help you do just this. Recorded data of your HVAC system's usage and outdoor weather information is priceless for testing & balancing.  The review of recorded data offers considerable cost savings, in both time and effort, to when optimizing your system setup.  Additionally, you can reduce the number of people necessary to do the testing and balancing down to 1 person.
+Yes. Remote Monitoring Server & GNU remotecontrol work together to help you do just this. Recorded data of your HVAC system's usage and outdoor weather information is priceless for testing & balancing.  The review of recorded data offers considerable cost savings, in both time and effort, to when optimizing your system setup.  Additionally, you can reduce the number of people necessary to do the testing and balancing down to 1 person.
 
 @section Future Capabilities
-The next logical step is to expand GNU remotecontrol to be certified with the BACnet communication protocol.  Please see the section [GNU remotecontrol & BACnet] for more information.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
+The next logical step is to expand GNU remotecontrol to be certified with the BACnet communication protocol.  Please see the section @ref{GNU remotecontrol & BACnet} for more information.  The @uref{http://en.wikipedia.org/wiki/Modbus,MODBUS} communication protocol also may be implemented at a future date, but demand for this capability enhancement is not presently clear.
 
+@node GNU remotecontrol & BACnet
 @chapter GNU remotecontrol & BACnet
 @section Introduction
 The @uref{http://www.bacnet.org/,BACnet} data communication protocol of @uref{http://www.ashrae.org/,AHSRAE} provides the @uref{http://www.bacnet.org/WG/XML/index.html,BACnet XML Working Group}. 
@@ -214,27 +235,29 @@ The following is a list of information that will greatly help you plan for the u
 	 @end itemize
 
 @section Going Forward
-The [Roadmap] of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.
+The @ref{Roadmap} of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.
 
+@node Tax Benefit
 @chapter Tax Benefit
 @uref{http://www.irs.gov/irb/2006-26_IRB/ar11.html,Internal Revenue Bulletin: 2006-26}, @strong{Notice 2006-52}, @emph{Deduction for Energy Efficient Commercial Buildings} defines the tax deduction allowed for the hardware and software required for GNU remotecontrol to operate in commercial buildings in the United States.  The costs for GNU remotecontrol are 100% tax deductible...if you meet these requirements.  The tax deduction, combined with spending less money for energy due to an improved energy management strategies, means GNU remotecontrol more than pays for itself.
 
+@node System Architecture and Concepts
 @chapter System Architecture and Concepts
 @section Necessary vs. Optional
 The following pieces of the GNU remotecontrol architecture are necessary.
      @itemize @bullet
 	 @item
-	 [Web Server]
+	 Web Server
 	 @item
-	 [Database Server]
+	 Database Server
 	 @end itemize
 
 The following pieces of the GNU remotecontrol architecture are optional.
      @itemize @bullet
 	 @item
-	 [Remote Monitoring Server]
+	 Remote Monitoring Server
 	 @item
-	 [Email Server]
+	 Email Server
 	 @end itemize
 
 @section Web Server
@@ -315,7 +338,7 @@ The question must be answered....@strong{why would you not monitor your systems}
 
 Running a Remote Monitoring Server is the easy part of having a Remote Monitoring Server.  The biggest decision you have to make is.....@strong{ are you going to run it, or is someone else}?  Then, and only then, choose the technology combination you want to have for your Remote Monitoring Server.  Do not let your skill set alone decide what is best for meeting your needs.  Determine what you needs are, count the cost, and then choose your technology.
 
-We have developed plugins for Nagios that quite nicely round out the energy management strategy.  Check out the [Nagios Plugins].
+We have developed plugins for Nagios that quite nicely round out the energy management strategy.  Check out the Nagios Plugins.
 
 @strong{Popular Options}
 	 
@@ -344,7 +367,7 @@ We have developed 2 plugins to round out the GNU remotecontrol Architecture.  Th
 Please review the source code for each of these plugins to see detailed instruction for proper usage.  The following is an outline of the detailed instruction.
 
 @subsection Thermostat Plugin - check_ubicom
-This plugin will attempt to read temperature and humidity from an IP thermostat.   Successful reads initially set the response to STATE_OK.  If the temperature or  humidity falls outside the range set by the [warn-temperature] or the  [warn-humidity] arguments, then the response is upgraded to STATE_WARNING.  If the temperature or humidity falls outside the range set by the [critical-temperature] or the [critical-humidity] arguments, then the response is further upgraded to STATE_CRITICAL.  Failure to read both values (due to timeout or parsing failure) results in a STATE_UNKNOWN response.
+This plugin will attempt to read temperature and humidity from an IP thermostat.   Successful reads initially set the response to @code{STATE_OK}.  If the temperature or  humidity falls outside the range set by the @code{warn-temperature} or the  @code{warn-humidity} arguments, then the response is upgraded to @code{STATE_WARNING}.  If the temperature or humidity falls outside the range set by the @code{critical-temperature} or the @code{critical-humidity} arguments, then the response is further upgraded to @code{STATE_CRITICAL}.  Failure to read both values (due to timeout or parsing failure) results in a @code{STATE_UNKNOWN} response.
 
 Temperature and humidity arguments may specify a minimum, a maximum, or both.   A ':' character must be used to follow a minimum or precede a maximum.  For example.....
 
@@ -508,9 +531,8 @@ Follow the configuration stated by the Email application you so choose to use.
 
 The email you most likely will want is to be notified of a condition occurring and you are notified by your Remote Monitoring Server.  You do not need to keep the email, nor do you need to do any reporting on the emailing.  All of the information you would ever need to report on lives in your Remote Monitoring Server as either log file or a database.  The benefit of your email is to be notified when you need to look into something, and that is all.  The benefit of that awareness is priceless.  Combine that with managing those email notifications to you and others in the lists of email addresses, that all of the time changes, makes email really valuable for managing the time of everyone involved.
 
-@quotation Note:
-Don't use an SMS address when sending email to cell phone's.  Use the cell phone's email address via the @uref{http://www.makeuseof.com/tag/email-to-sms/,Free Email To SMS Gateways}.  Major United States Carriers offer this to both email and SMS users.  Look for the same options of the cell phone provider's of the land in which you live.  You will be much happier using the cell phone's email address, as you can easily track if the message went out or not, versus wondering about the SMS system in which knowing is often a mystery, and it is 1 less system to work with.
-@end quotation
+Note: Don't use an SMS address when sending email to cell phones.  Use the cell phone's email address via the @uref{http://www.makeuseof.com/tag/email-to-sms/,Free Email To SMS Gateways}.  Major United States Carriers offer this to both email and SMS users.  Look for the same options of the cell phone provider's of the land in which you live.  You will be much happier using the cell phone's email address, as you can easily track if the message went out or not, versus wondering about the SMS system in which knowing is often a mystery, and it is 1 less system to work with.
+
 
 @section Frequently Asked Questions
 @subsection What is RMS?
@@ -558,11 +580,12 @@ Not to sound silly, but RMS prevents a mess. It is impossible to consciously imp
 @subsection Really, how do I know that I need RMS?
 If you worry about your “stuff”, and your “stuff” has an IP address, you need RMS.
 
+@node Usage Instructions
 @chapter Usage Instructions
 @section Browser Selection
 GNU remotecontrol is designed to be used with either @uref{http://www.mozilla.org/,Mozilla Firefox}, or with @uref{http://www.konqueror.org/,Konqueror}.  Microsoft @uref{http://en.wikipedia.org/wiki/Internet_Explorer,Internet Explorer} (IE), though one of the worlds first @uref{http://en.wikipedia.org/wiki/History_of_the_web_browser,graphical} options for a @uref{http://en.wikipedia.org/wiki/Web_browser,web browser} and is credited with helping to grow the Internet past @uref{http://en.wikipedia.org/wiki/Timeline_of_web_browsers,text browsing}, the application @uref{http://www.microsoft.com/ie,IE} simply changes too much and too often to deal with all of the inconsistencies of the browser not being compliant with @uref{http://www.w3.org/standards/agents/browsers,International Standards} of the World Wide Web.  In addition, IE only runs on the Windows operating system whereas GNU remotecontrol runs on any server that can run @uref{http://php.net/downloads.php,PHP}.....of which there are many.
 
-Please review the various [Use Case Scenarios] prior to reading how to go about Using GNU remotecontrol.  These Use Case Scenarios will greatly help you to see the value of Using GNU remotecontrol.
+Please review the various @ref{Use Case Scenarios} prior to reading how to go about Using GNU remotecontrol.  These Use Case Scenarios will greatly help you to see the value of Using GNU remotecontrol.
 
 @section admin.php
 This webpage provides User Management in the GNU remotecontrol application.
@@ -588,9 +611,9 @@ You set the total number of thermostats the user account can have to whatever yo
 @section index.php
 You are ready to use index.php web page after you have setup your entry in the admin.php web page.
 
-Day in and day out, you will want to know the settings on the different IP enabled thermostats you are charged with caring for.  Using GNU remotecontrol will help you see if anyone has changed the settings on an IP enabled thermostat, thereby altering if not defeating your energy management strategy.  Combing into the equation a [Remote Monitoring Server] with [Email Server] notification and you are on top of the game for energy management.
+Day in and day out, you will want to know the settings on the different IP enabled thermostats you are charged with caring for.  Using GNU remotecontrol will help you see if anyone has changed the settings on an IP enabled thermostat, thereby altering if not defeating your energy management strategy.  Combing into the equation a Remote Monitoring Server with Email Server notification and you are on top of the game for energy management.
 
-Loading index.php causes each attribute of each device to be read.  The parameters currently set on the device are listed in the web page.  The error code BLAH is displayed if the device is unresponsive or unreachable.  Please see the section [Troubleshooting] for more information.
+Loading index.php causes each attribute of each device to be read.  The parameters currently set on the device are listed in the web page.  The error code BLAH is displayed if the device is unresponsive or unreachable.  Please see the section Troubleshooting for more information.
 
 Reload the web page index.php at any time to poll each device and read the current parameters of the attributes for all device entries.
 
@@ -1036,9 +1059,10 @@ A useful feature of the Transaction Log is the ability to list entries according
 	 Setup a simple webpage that will fit the temperature and humidity readings of both the thermostats and the weather conditions you care about onto the screen of your @uref{http://en.wikipedia.org/wiki/Microbrowser,cell phone}.  You then can easily see, @uref{http://en.wikipedia.org/wiki/Mobile_Web,in 1 viewing}, what you care to know.
 	 @end itemize
 
+@node Use Case Scenarios
 @chapter Use Case Scenarios
 @section  Start Small
-You can run GNU remotecontrol on a laptop, a desktop, even a hand-held computer....as long as you can achieve setting up your [Web Server] and [Database Server].
+You can run GNU remotecontrol on a laptop, a desktop, even a hand-held computer....as long as you can achieve setting up your Web Server and Database Server.
 
 Benefits of running GNU remotecontrol on a smaller hardware combination include:
      @itemize @bullet
@@ -1118,12 +1142,12 @@ Blurb for who is paying the bucks for energy!!!
 @section Scenario 9 - Public Utility Provider - RESIDENTIAL Customer
 This provider has decided to offer an energy management service to their customer.  They have thousands and thousands of customers.  They need a way to help their customer manage their thermostat and air flow in their residential and commercial facilities.
 
-The provider has a 2 part offering to their customer.  The provider uses GNU remotecontrol to do more than just turn off the electricity and/or natural gas to the HVAC unit.  They now are capable of providing temperature adjustments while having HVAC fan circulate air, or only circulate air.  The combination options available now are are much more than turning off the entire HVAC unit.  The provider also uses [Smart Metering] to connect HVAC usage with energy meter readings to show readings on an hourly basis.  This combined offering provides for a better control of HVAC resources and a better understanding of energy usage as the billing cycle progresses.
+The provider has a 2 part offering to their customer.  The provider uses GNU remotecontrol to do more than just turn off the electricity and/or natural gas to the HVAC unit.  They now are capable of providing temperature adjustments while having HVAC fan circulate air, or only circulate air.  The combination options available now are are much more than turning off the entire HVAC unit.  The provider also uses Smart Metering to connect HVAC usage with energy meter readings to show readings on an hourly basis.  This combined offering provides for a better control of HVAC resources and a better understanding of energy usage as the billing cycle progresses.
 
 @section Scenario 10 - Public Utility Provider - COMMERCIAL Customer
 This provider has decided to offer an energy management service to their customer.  They have thousands and thousands of customers.  They need a way to help their customer manage their thermostat and air flow in their residential and commercial facilities.
 
-The provider has a 2 part offering to their customer.  The provider uses GNU remotecontrol to do more than just turn off the electricity and/or natural gas to the HVAC unit.  They now are capable of providing temperature adjustments while having HVAC fan circulate air, or only circulate air.  The combination options available now are are much more than turning off the entire HVAC unit.  The provider also uses [Automated Meter Reading] and [Smart Metering] to connect HVAC usage with energy meter readings to show readings on an hourly basis.  This combined offering provides for a better control of HVAC resources and a better understanding of energy usage as the billing cycle progresses.
+The provider has a 2 part offering to their customer.  The provider uses GNU remotecontrol to do more than just turn off the electricity and/or natural gas to the HVAC unit.  They now are capable of providing temperature adjustments while having HVAC fan circulate air, or only circulate air.  The combination options available now are are much more than turning off the entire HVAC unit.  The provider also uses Automated Meter Reading and Smart Metering to connect HVAC usage with energy meter readings to show readings on an hourly basis.  This combined offering provides for a better control of HVAC resources and a better understanding of energy usage as the billing cycle progresses.
 
 @section Scenario 11 - Automated Meter Reading
 @uref{http://en.wikipedia.org/wiki/Automated_meter_reading,Automated Meter Reading} is not the same as Smart Metering.  They are both part of @uref{http://en.wikipedia.org/wiki/Smart_meter#Advanced_metering_infrastructure,Advanced Metering Infrastructure}.  The Automated Meter Reading process blah.  Automated Meter Reading....
@@ -1134,6 +1158,7 @@ The provider has a 2 part offering to their customer.  The provider uses GNU rem
 @section Summary
 There is no 1 reason to implement GNU remotecontrol.  The reasoning is often multiple and overlapping.  Think local and global and you will easily see there is more good reason to use GNU remotecontrol than ever considered before.
 
+@node Implementation Cost
 @chapter Implementation Cost
 The GNU remotecontrol framework leverages already existing Information Technologies of a data network, web server with a complete operating system, database server, email, and network monitoring.  The cost to implement GNU remotecontrol is then reduced to the following ordered list:  
 
@@ -1162,12 +1187,13 @@ It is highly recommended you choose external sensors for your IP enabled thermos
 
 The cost to implement GNU remotecontrol, in comparison with a lesser energy management strategy for any HVAC system, justifies the completion of a critical cost analysis to determine if GNU remotecontrol is appropriate for your circumstances.  Most likely, it is. 
 
+@node Roadmap
 @chapter Roadmap
 
 The GNU remotecontrol Road Map is planned for and limited by the following boundaries.
 
 @section Interoperability
-The Future of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.  Please review [GNU remotecontrol & BACnet] for more information.
+The Future of GNU remotecontrol is a commitment to International standards and protocols for Information Technology in order to provide availability, relevance, transparency, and maintenance of the GNU remotecontrol framework.  The BACnet XML Working Group is an excellent example of these attributes.  Please review @ref{GNU remotecontrol & BACnet} for more information.
 
 @section HVAC Original Equipment Manufacturer - Feature Addition
 OEM's have not added the feature of IP enablement in the past.  The benefits for OEM's to add IP enablement to their thermostat product offering far outweigh any hindrance from remaining a stand alone device.  Examples of these benefits include interoperability, furthered energy management strategies, and increased customer satisfaction from the new capability of remote access to their thermostat.
@@ -1178,8 +1204,9 @@ AEM's have added the feature of IP enablement in the past with limited success. 
 @section Benefit Analysis
 The @uref{http://en.wikipedia.org/wiki/Rate_of_return,Return on Investment} (ROI) is most likely the bottom line to the success of GNU remotecontrol.  The @uref{http://sccmet.com/whatis.html,Retro Commission} (RCx) of any facility, small or large, is best evaluated by.....@strong{is it worth it}?  Even @uref{http://en.wikipedia.org/wiki/Testing_Adjusting_Balancing,Testing-Adjusting-Balancing} a system is well worth the time and effort, to make sure your system is setup as suitable for your needs and wants.  The answer to this ROI question involves completing several different calculations to make that determination.  New construction does not require as many calculations to come to that determination, but often require different aspects to be evaluated and then calculated.  Don't forget to add in the cost/saving of Information Technology.  This list includes system design, capital expenditures, and system operation.  Then, don't forget to add in your End User cost/saving for training and system operation.
 
-Not every facility requires a complete set of calculations to know what you need to do for your energy management strategy.  Consider simple advice on best practices offered by your [Decision Makers] to help you select what is best for you.  Regardless of what you choose for your energy management strategy, have a plan.....work the plan.....review and revise your plan as appropriate.
+Not every facility requires a complete set of calculations to know what you need to do for your energy management strategy.  Consider simple advice on best practices offered by your Decision Makers to help you select what is best for you.  Regardless of what you choose for your energy management strategy, have a plan.....work the plan.....review and revise your plan as appropriate.
 
+@node REFERENCE
 @chapter REFERENCE
 
 @section Cabling 101
@@ -1242,21 +1269,27 @@ Pressing onward, imagine a device is locked up and you need to power the device 
 
 The thing for you with PoE is you need to determine how much electrical power you need.  That will tell you what specification you need to comply with.  The manufacturer of the PoE device will tell you what standards they are compatible with.  From there, buy PoE supplies as necessary.  Your selection is either a simple single-port power injector (Midspan), or a @uref{http://www2.microsemi.com/PowerDsine/Products/Midspan/,rack-mounted} midspan power injector , or buy new data network switches that have PoE built-in as an integrated feature (Endspan).  Count the cost and choose as best suits you.
 
-The biggest benefit of PoE is you have the ability to have a better handle on your @uref{http://en.wikipedia.org/wiki/Surge_suppression,surge-suppression} and @uref{http://en.wikipedia.org/wiki/Transient-voltage-suppression_diode,transient-voltage-suppression} efforts.  This is because you so chose to install your cabling as [recommended].  Running a wire as an extension off of an HVAC unit, or a wall outlet, in order to supply electricity to power the PoE capable hardware, without also providing proper protection for that PoE hardware, is absolutely and positively nothing but trouble.  That trouble often shows up as electrical damage in the form of peculiar performance of the hardware, or even hardware failure.
+The biggest benefit of PoE is you have the ability to have a better handle on your @uref{http://en.wikipedia.org/wiki/Surge_suppression,surge-suppression} and @uref{http://en.wikipedia.org/wiki/Transient-voltage-suppression_diode,transient-voltage-suppression} efforts.  This is because you so chose to install your cabling as recommended.  Running a wire as an extension off of an HVAC unit, or a wall outlet, in order to supply electricity to power the PoE capable hardware, without also providing proper protection for that PoE hardware, is absolutely and positively nothing but trouble.  That trouble often shows up as electrical damage in the form of peculiar performance of the hardware, or even hardware failure.
 
 @subsection  Cautionary
 Here is a strong and very simple example of why powering your IP enabled thermostat from an HVAC unit is a bad idea.  The drain line on the HVAC unit some how gets blocked.  This triggers the float switch to prevent flooding and that powers down the whole system.  The thermostat has then been turned off due to the absence of power to the thermostat.  Apply that scenario to an IP enabled thermostat, and your will be unable to access your HVAC unit from your data network.  Power over Ethernet is a really good idea.
 
 Whatever you do, always use cable safely.  Please contact your local fire authority for more information.
 
+@node Contributors
 @chapter Contributors
 Stephen Dawson, Robert Tallent, Bob Vincent, Michael Jacoby.
 
-@comment SHD @node GNU Free Documentation License
+@node GNU Free Documentation License
+@chapter GNU Free Documentation License
 @appendix GNU Free Documentation License
+@c In order for the below `@include' command to work, the included file must be in the same directory as this file.
+@include fdl.texi
 
-@comment SHD @include fdl.texi
-
-@printindex cp
+@c Texinfo will populate the index automatically with the index entries you create using the `@cindex' command throughout the document. For more information, see Chapter 13 of the Texinfo manual.
+@c @node Index
+@c @chapter Index
+@c @unnumbered Index
+@c @printindex cp
 
 @bye
